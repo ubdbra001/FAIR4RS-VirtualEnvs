@@ -24,11 +24,12 @@ title: 'Lesson Title' # FIXME
 created: ~ # FIXME: ( ~ means empty, replace with date formatted as above)
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'software, lesson, The Carpentries, FAIR4RS' # FIXME
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+# (the default, pre-alpha, is the appropriate for brand new lessons)
+life_cycle: 'pre-alpha'
 
 # License of the lesson
 license: 'CC-BY 4.0'
@@ -40,7 +41,11 @@ source: 'https://github.com/carpentries/workbench-template-rmd' # FIXME
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'rse@sheffield.ac.uk' # FIXME
+
+# Custom URL if you are deploying to a URL that is not the default
+# github pages domain
+# url:
 
 # Navigation ------------------------------------------------
 #
@@ -81,5 +86,4 @@ profiles:
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
-
-
+varnish: RSE-Sheffield/uos-varnish@main
