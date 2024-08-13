@@ -14,17 +14,14 @@
 # See https://carpentries.github.io/sandpaper-docs/editing.html#adding-a-custom-logo
 carpentry: 'incubator'
 
-# Alt-text description of the lesson.
-carpentry_description: 'Lesson Description'
-
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Reproducible Computational Environments - Virtual Environments'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME: ( ~ means empty, replace with date formatted as above)
+created: '2024-08-13'
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, lesson, The Carpentries, FAIR4RS' # FIXME
+keywords: 'FAIR4RS, University of Sheffield, Virtual Environments, Reproducibility'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
@@ -35,13 +32,13 @@ life_cycle: 'pre-alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-rmd' # FIXME
+source: 'https://github.com/ubdbra001/FAIR4RS-VirtualEnvs'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'rse@sheffield.ac.uk' # FIXME
+contact: 'daniel.brady@sheffield.ac.uk'
 
 # Custom URL if you are deploying to a URL that is not the default
 # github pages domain
