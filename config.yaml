@@ -68,7 +68,11 @@ contact: 'daniel.brady@sheffield.ac.uk'
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.Rmd
+- 01-comp-repro.Rmd
+- 02-what-are-venvs.Rmd
+- 03-using-venvs.Rmd
+- 04-gen-reqs.Rmd
+- 05-limitations.Rmd
 
 # Information for Learners
 learners: 
