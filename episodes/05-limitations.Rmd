@@ -95,16 +95,46 @@ to the 'language' layer. But these tools are not able to capture the 'operating 
 Depending on the degree of computational reproducibility you are looking for capturing the 
 'package' and 'language' layers may be enough. However, if you are looking for byte-for-byte 
 reproducibility you will likely also want to capture as much of the computational environment as 
-possible, and so you will need to turn to other tools
+possible, and so you will need to turn to other tools.
 
 ## Capturing the operating system layer
 
-There are multiple different tools that can be used to capture the 
+There are multiple different tools that can be used to capture the layer below 'package'/
+'language'
+
+### Virtual machines
+
+This is one of the more commonly known tools for capturing and replicating the 'Operating System' 
+layer a computational environment. Virtual machines (VMs) are effectively an emulation or 
+virtualisation of an operating within your own "host" operating system. For example, using a 
+virtual machine I can create and run a Windows XP operating system within my Windows 10 machine. 
+These can also be interacted with using familiar point and click interfaces, and can be customised 
+to access a specific portion of the host machines CPU, memory, disk, etc.  
+It is possible to take a snapshot of an exiting VM for distribution, or use an ['Infrastructure as 
+code'](https://en.wikipedia.org/wiki/Infrastructure_as_code) tool such as 
+[Ansible](https://docs.ansible.com/ansible/latest/index.html) to write a script to recreate a 
+specific environment (e.g. install specific software, etc)
 
 ### Containers
 
-Containers are one solution for this.
+Containers are similar to Virtual machines in that they virtualise an operating system, but 
+containers are typically more lightweight than VMs as they only contain software and files that are 
+explicitly defined in order to run the project contained within them.  
+They also typically don't have a GUI in the same way the OS on your computer does (although some 
+containers will provide an interface, e.g. RStudio Server).  
+If you want to create an environment on your machine and then run it on something more powerful 
+(like a HPC) then containers are a good way of achiving this.
+
 
 ### Nix/Guix
 
-An alternative is Nix/Guix
+[Nix(OS)](https://nixos.org) and [Guix](https://guix.gnu.org) also provide a way of capturing the 
+computational environment below the 'packages' and 'language' layers, but take a slightly different 
+approach to this than VMs and Containers.  
+These are package managers based on the idea declarative configurations, that is: "specify your 
+setup with a programmable configuration file, and then let the package manager arrange for the 
+software available on the system to reflect that".  
+This is similar to what `pip` is doing with the `requirements.txt` file described previously, but 
+for an entire Operating system. However, this approach takes it one step further by allowing 
+multiple versions of the same package to exist on a machine simultneously.  
+For a more complete outline of this approach [see this post](https://lwn.net/Articles/962788/)
