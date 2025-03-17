@@ -1,81 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/01-introduction.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/01-comp-repro.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/404.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/CODE_OF_CONDUCT.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/02-what-are-venvs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/LICENSE.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/03-using-venvs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/aio.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/04-gen-reqs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/images.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/05-limitations.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/index.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/01-introduction.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/404.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/acknowledgements.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/LICENSE.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/aio.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/images.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/index.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/01-comp-repro.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/instructor-notes.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/introduction.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/02-what-are-venvs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/key-points.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/03-using-venvs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/keypoints.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/04-gen-reqs.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/profiles.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/05-limitations.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor/reference.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/instructor-notes.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/introduction.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/key-points.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/acknowledgements.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/keypoints.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/profiles.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-rmd/reference.html</loc>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/keypoints.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/keypoints.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://ubdbra001.github.io/FAIR4RS-VirtualEnvs/reference.html</loc>
   </url>
 </urlset>
