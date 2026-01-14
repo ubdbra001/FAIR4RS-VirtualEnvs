@@ -1,114 +1,161 @@
 ---
-title: "Using Markdown"
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+title: Capturing computational environments
+teaching: 10
+exercises: 0
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+::: questions
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What is a package manager?
+- What are virtual environments?
+- How can we use them to capture information about a specific computational environment?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: objectives
-
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Introduction
-
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
-
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 1: Can you do it?
-
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
-
-:::::::::::::::::::::::: solution 
-
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
+:::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+::: objectives
 
-:::::::::::::::::::::::: solution 
+- Develop a basic understanding of what a package manager does
+- Develop a conceptual understanding of virtual environments
 
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can use standard markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-::::::::::::::::::::::::::::::::::::: callout
-
-Callout sections can highlight information.
-
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::
 
 
-## Math
+Now you have a better idea of the challenges around computational reproducibility let's look at how 
+Package Managers and Virtual Environments can be used in conjunction to capture the 'packages' 
+layer of your project's computational environment.
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+![](files/PackageLayerCapture.png)
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
 
-Cool, right?
+## What is a Package and a Package Manager?
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+As mentioned in the previous section, a package can be broadly defined as a bundle of code that 
+is designed to accomplish a specific task.
+As the name suggests, a Package Manager is a tool used for adding, remove, upgrade, and keeping 
+track of the packages installed for a particular piece of software (including programming 
+languages).  
+As part of this course we will be using the Python programming language, and so we
+will be using Python's built in package manager: `pip`. However, many of the concepts discussed 
+apply to other programming languages.
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+In the context of your code, the packages you install are also known as the dependencies for your 
+code (i.e. your code depends on these packages being available to work). The packages you install 
+will also have their own dependencies, and these dependencies may have their own dependencies. 
+Generally this is not something you need to worry about, because as part of the installation process 
+the package manager will work out the dependencies of all the packages that need to be installed 
+(a process called _dependency resolution_), and then install them for you.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::: callout
 
-[r-markdown]: https://rmarkdown.rstudio.com/
+### For example:
+
+You want to install the `pandas` package, `pip` will check to see which other packages `pandas` needs
+and it will see that one of the dependencies of `pandas` is the `numpy` package.  
+So when you install `pandas`, `pip` will also install `numpy` for you.  
+
+:::::::::::::::::
+
+Package mangers will also keep track of the specific versions of the packages installed for a 
+project, and can produce files allowing this information to be shared. This functionality is a key 
+part of capturing a specific computational environment and we'll return to it later.
+
+:::: spoiler
+
+You can learn more about Python packages and how to trun your code into a package in the 
+[FAIR4RS Packaging lesson](https://fair2-for-research-software.github.io/FAIR4RS-Packaging/)
+
+::::::
+
+::::::: callout
+
+### Where does pip get packages from?
+
+When you install a package using `pip` it will typically access the [Python Package Index (PyPI)](https://pypi.org/)
+to download and install that package.  
+PyPI is an online repository of over 500,000 packages, and is the most commonly used source for 
+installing Python packages.
+
+It is also possible to install packages from local files, private repositories, or even directly 
+from Github repositories, but this is outside the scope of this lesson. 
+
+:::::::
+
+## What are Virtual Environments?
+
+By default when you use `pip` to install a package it will be installed in Python's base 
+environment, and so using `pip` alone for multiple projects will result in their dependencies
+sharing the same space.  
+
+:::: discussion
+
+Can you think of a few reasons why this may be a problem?
+
+::::::
+
+:::: solution
+
+- Different projects requiring different versions of the same package (Dependency clashes)
+    - Could be a package you use directly
+    - Could also be a dependency of a package you use
+- Difficulty identifying which packages are required for which projects (Isolating dependencies)
+:::::::
+
+This diagram illustrates the situation:
+
+![](files/BaseEnv.png)
+
+1. In this example, 'Project 1' requires `numpy` v1.18 and while 'Project 2' doesn't directly 
+require a conflicting version of `numpy`, `pandas` requires at least v1.22. This creates a 
+dependency clash - You cannot have both versions of this package installed in the same environment, 
+so either:
+    - You break the older project's computational environment, or 
+    - You cannot develop your new code.  
+
+2. If you manage to resolve the dependency clash, you still have the issue that the additional 
+dependencies (namely `pillow`) from 'Project 1' will also be captured as part of the computational 
+environment for 'Project 2'. This _may_ not cause any issues, but it is generally not good practice: 
+    - When capturing information about the computational environment for a project we only want to 
+include exactly what is required for the reproduction of that project.  
+
+Virtual environments are a tool designed to solve both of these problems. Conceptually they work by 
+creating a separate, self-contained space to install packages. Because these spaces are isolated 
+from one another you are able to install different versions of the same package for different 
+projects without creating dependency clashes.
+This isolation between projects also allows you to accurately capture which packages were used 
+within a specific project, making it easier to recreate that aspect of the computational 
+environment in a different context.  
+In Python there are several different tools you can use to create and manage virtual environments.
+We'll discuss some of the options later, but for this course we'll focus on Python's built in virtual
+environment tool: `venv`.
+
+![](files/venvs.png)
+
+## Capturing the 'packages' level of a computational environment
+
+Now we've described Package Managers and Virtual Environments we can outline the steps required to 
+successfully capture the 'packages' layer of a computational environment for a project:
+
+1. Create a virtual environment for your project
+
+2. Develop your project, installing packages into the virtual environment as needed
+
+3. Periodically record the packages installed in the environment, ideally to a file alongside the 
+code
+
+In the next section we'll get to grips with using `pip` and `venv`, and then move onto how to 
+capture the 'packages' level of a computational environment using them.
+
+:::: keypoints
+
+ - Package Managers are used to install, remove, upgrade, and track software.
+ - In the context of Python and other programming languages this software is bundles of other 
+ people's code.
+ - However, installing all packages to the same place can cause dependency clashes and makes 
+ recreating a computational environment difficult. 
+ - Virtual environments are used to deal with this problem by creating isolated spaces where 
+ packages can be installed without interfering with one another.
+ - Using these two tools together allows capture of the 'package' level of your computational 
+ environment
+
+::::::
