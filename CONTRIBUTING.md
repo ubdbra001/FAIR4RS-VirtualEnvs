@@ -102,9 +102,9 @@ community listed at <https://carpentries.org/connect/> including via social
 media, slack, newsletters, and email lists. You can also [reach us by
 email][contact].
 
-[repo]: https://example.com/FIXME
-[repo-issues]: https://example.com/FIXME/issues
-[contact]: mailto:team@carpentries.org
+[repo]: https://github.com/ubdbra001/FAIR4RS-VirtualEnvs
+[repo-issues]: https://github.com/ubdbra001/FAIR4RS-VirtualEnvs/issues
+[contact]: mailto:rse@sheffield.ac.uk
 [cp-site]: https://carpentries.org/
 [dc-issues]: https://github.com/issues?q=user%3Adatacarpentry
 [dc-lessons]: https://datacarpentry.org/lessons/
