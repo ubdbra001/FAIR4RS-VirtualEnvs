@@ -5,18 +5,33 @@
 # ensuring that the author list and other fields remain accurate.
 
 cff-version: 1.2.0
-title: FIXME
+title: 'Reproducible Computational Environments - Virtual Environments'
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
   re-use, adapt, or expand on the content in your own
   training material.
-type: dataset
+type: software
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: 'Daniel'
+    family-names: 'Brady'
+    email: 'daniel.brady@sheffield.ac.uk'
+    affiliation: University of Sheffield
+    orcid: 'https://orcid.org/0000-0003-4671-0676'
+repository-code: 'https://github.com/ubdbra001/FAIR4RS-VirtualEnvs'
+url: 'https://github.com/ubdbra001/FAIR4RS-VirtualEnvs'
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  Ensuring that others are able to take your code, run it, and are able to
+  produce the same (or equivalent) results is one of the key tenets of FAIR 
+  and reproducible research software. 
+  This course will provide you with an overview of different ways to make
+  your code reproducible and then focus on virtual environments as a specific
+  tool for computational reproducibility.
+
+keywords:
+  - carpentries
+  - fair4rs
+  - university of sheffield
+  - virtual environments
+  - reproducibility
 license: CC-BY-4.0
