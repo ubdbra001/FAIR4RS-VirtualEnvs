@@ -126,6 +126,7 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+<li><a class="dropdown-item" href="acknowledgements.html">Acknowledgements</a></li>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
           </ul>
 </li>
@@ -247,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-comp-repro.html">1. Using Markdown</a>
+        <a href="01-comp-repro.html">1. What is Computational Reprodicibility?</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -259,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-what-are-venvs.html">2. Using Markdown</a>
+        <a href="02-what-are-venvs.html">2. Capturing computational environments</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -271,7 +272,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-using-venvs.html">3. Using Markdown</a>
+        <a href="03-using-venvs.html">3. Getting started with <code>venv</code>and <code>pip</code></a>
     </div>
 <!--/div.accordion-header-->
 
@@ -283,7 +284,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-gen-reqs.html">4. Using Markdown</a>
+        <a href="04-gen-reqs.html">4. Using <code>venv</code> and <code>pip</code> to capture a computational environment</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -295,7 +296,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-limitations.html">5. Using Markdown</a>
+        <a href="05-limitations.html">5. Limitations</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -328,7 +329,8 @@
                       <li>
                         <a href="profiles.html">Learner Profiles</a>
                       </li>
-                      <li><a href="reference.html">Reference</a></li>
+                      <li><a href="acknowledgements.html">Acknowledgements</a></li>
+<li><a href="reference.html">Reference</a></li>
                     </ul>
 </div>
                 </div>
@@ -358,61 +360,72 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="01-comp-repro"><h2 class="section-heading"><a href="01-comp-repro.html">Using Markdown</a></h2>
+<section id="01-comp-repro"><h2 class="section-heading"><a href="01-comp-repro.html">What is Computational Reprodicibility?</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="02-what-are-venvs"><h2 class="section-heading"><a href="02-what-are-venvs.html">Using Markdown</a></h2>
+<li>Typically, simply providing your source code does not allow other to
+reproduce your work.</li>
+<li>Computational reproducibility is the degree to which code can be run
+in a different context.</li>
+<li>Improving computational reproducibility relies on capturing
+information about your computational environment.</li>
+</ul></section><section id="02-what-are-venvs"><h2 class="section-heading"><a href="02-what-are-venvs.html">Capturing computational environments</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="03-using-venvs"><h2 class="section-heading"><a href="03-using-venvs.html">Using Markdown</a></h2>
+<li>Package Managers are used to install, remove, upgrade, and track
+software.</li>
+<li>In the context of Python and other programming languages this
+software is bundles of other people’s code.</li>
+<li>However, installing all packages to the same place can cause
+dependency clashes and makes recreating a computational environment
+difficult.</li>
+<li>Virtual environments are used to deal with this problem by creating
+isolated spaces where packages can be installed without interfering with
+one another.</li>
+<li>Using these two tools together allows capture of the ‘package’ level
+of your computational environment</li>
+</ul></section><section id="03-using-venvs"><h2 class="section-heading"><a href="03-using-venvs.html">Getting started with <code>venv</code>and <code>pip</code></a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="04-gen-reqs"><h2 class="section-heading"><a href="04-gen-reqs.html">Using Markdown</a></h2>
+<li>You can create, activate, and deactivate virtual environments using
+the <code>venv</code> package</li>
+<li>You can installing packages in a virtual environment using
+<code>pip install</code>, and view installed packages with
+<code>pip list</code>
+</li>
+<li>Python and <code>venv</code> create an directory on your computer
+that contains your virtual environment ( a separate Python interpreter
+and library)</li>
+<li>Activating and deactivating the virtual environment modifies the
+<code>PATH</code> and <code>PYTHONPATH</code> environmental variables to
+add/remove the path to the directory containing the virtual
+environment.</li>
+</ul></section><section id="04-gen-reqs"><h2 class="section-heading"><a href="04-gen-reqs.html">Using <code>venv</code> and <code>pip</code> to capture a computational environment</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="05-limitations"><h2 class="section-heading"><a href="05-limitations.html">Using Markdown</a></h2>
+<li>Package versions can be specified by using the semantic versioning
+syntax (or, less commonly, the calendar versioning syntax).</li>
+<li>
+<code>pip freeze</code> can be used to get a list of installed
+packages, and these can be written to a file.</li>
+<li>Packages can be restored from a file produced by
+<code>pip freeze</code> by using the <code>--requirement</code> option
+with <code>pip install</code>.</li>
+</ul></section><section id="05-limitations"><h2 class="section-heading"><a href="05-limitations.html">Limitations</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>
+<code>pip</code> and <code>venv</code> provide the most basic
+functionality for capturing this level of your computational
+environment.</li>
+<li>Other tools (e.g. <code>uv</code>, <code>pixi</code>) are available
+that build on this basic functionality that would be worth investigating
+and incorporating.</li>
+<li>Virtual environments can only capture a portion of the computational
+environment.</li>
+<li>Projects that require more of the computational environment to be
+captured may need more advanced tools (e.g. VMs, containers, Nix/Guix)
+to achieve this.</li>
 </ul></section>
 </div>
     </main>

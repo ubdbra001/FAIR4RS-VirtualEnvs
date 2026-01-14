@@ -126,6 +126,7 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+<li><a class="dropdown-item" href="acknowledgements.html">Acknowledgements</a></li>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
           </ul>
 </li>
@@ -247,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-comp-repro.html">1. Using Markdown</a>
+        <a href="01-comp-repro.html">1. What is Computational Reprodicibility?</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -259,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-what-are-venvs.html">2. Using Markdown</a>
+        <a href="02-what-are-venvs.html">2. Capturing computational environments</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -271,7 +272,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-using-venvs.html">3. Using Markdown</a>
+        <a href="03-using-venvs.html">3. Getting started with <code>venv</code>and <code>pip</code></a>
     </div>
 <!--/div.accordion-header-->
 
@@ -283,7 +284,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-gen-reqs.html">4. Using Markdown</a>
+        <a href="04-gen-reqs.html">4. Using <code>venv</code> and <code>pip</code> to capture a computational environment</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -295,7 +296,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-limitations.html">5. Using Markdown</a>
+        <a href="05-limitations.html">5. Limitations</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -328,7 +329,8 @@
                       <li>
                         <a href="profiles.html">Learner Profiles</a>
                       </li>
-                      <li><a href="reference.html">Reference</a></li>
+                      <li><a href="acknowledgements.html">Acknowledgements</a></li>
+<li><a href="reference.html">Reference</a></li>
                     </ul>
 </div>
                 </div>
@@ -358,7 +360,7 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-01-comp-repro"><p>Content from <a href="01-comp-repro.html">Using Markdown</a></p>
+<section id="aio-01-comp-repro"><p>Content from <a href="01-comp-repro.html">What is Computational Reprodicibility?</a></p>
 <hr>
 <p>Last updated on 2026-01-14 |
 
@@ -374,8 +376,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What is computational reproducibility?</li>
 </ul>
 </div>
 </div>
@@ -385,81 +386,99 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Learn about computational reproducibility</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="making-your-results-and-code-reproducible">Making your results and code reproducible<a class="anchor" aria-label="anchor" href="#making-your-results-and-code-reproducible"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+<p>You have just finished your latest research project. The paper has
+been accepted by the journal (only minor revisions, yay!), the data is
+organised and ready to be placed in a repository, and your code is under
+version control and ready to be made public. So you’ve done everything
+to make your results reproducible, right?</p>
+<div id="discussion1" class="callout discussion">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
+<p>Does simply making your source code publicly available equate to
+making it reproducible?<br>
+If it doesn’t, what do you think can go wrong?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<ol style="list-style-type: decimal">
+<li><p>The code won’t run</p></li>
+<li><p>The code runs but doesn’t produce the same result</p></li>
+</ol>
+<hr>
+<p><a href="https://doi.org/10.1098/rsos.180448" class="external-link">Hardwicke et
+al. (2018)</a> found that code from approximately one-third of 35
+articles in <em>Cognition</em> produced the reported results.</p>
+<p><a href="https://doi.org/10.1177/2515245920918872" class="external-link">Obels el
+al. (2020)</a> found that of 36 registered-reports with data and code
+available the main results in just over half were computationally
+reproducible.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<p>Your code is just the tip of the pyramid of your computational
+environment, and to ensure that your results are computationally
+reproducible you will need to capture some of that computational
+environment.</p>
+</section><section><h2 class="section-heading" id="your-computational-environment">Your computational environment<a class="anchor" aria-label="anchor" href="#your-computational-environment"></a>
+</h2>
+<hr class="half-width">
+<p>A simplified way to think about your computational environment is to
+divide it into 5 layers, each with increasing generality:</p>
+<figure><img src="files/CompEnvLayers.png" title="5 layers within a computational environment" class="figure mx-auto d-block"></figure><ol style="list-style-type: decimal">
+<li>At the top is the most specific level: <strong>‘your code’</strong>.
+This is the code that you produced to analyse your data and get the
+final published result.<br>
+</li>
+<li>Below this is the <strong>‘packages’</strong> layer, containing the
+packages you used within your code. These are also bundles of code, but
+they serve a more general purpose, being used in multiple different
+pieces of (research) software. For example: <code>numpy</code>,
+<code>pandas</code>, etc.<br>
+</li>
+<li>Next is the <strong>‘language’</strong> layer. This is the specific
+programming language and version you used. Typically, both your code and
+the packages you have used are written in this language, and it consists
+of the language syntax as well as some built in packages (in some cases
+called the standard library).<br>
+</li>
+<li>The next layer is the <strong>‘operating system’</strong> layer.
+Which is a very simplified way of encapsulating all the code that sits
+between the programming language you are using, and the actual
+electronic hardware that makes up a computer.</li>
+<li>Finally, you have the actual computer hardware.</li>
+</ol></section><section><h2 class="section-heading" id="what-is-computational-reproducibility">What is computational reproducibility?<a class="anchor" aria-label="anchor" href="#what-is-computational-reproducibility"></a>
+</h2>
+<hr class="half-width">
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
 <div class="callout-content">
-
+<p>How would you define computational reproducibility?</p>
 </div>
 </div>
 </div>
@@ -468,44 +487,29 @@ challenge blocks?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
+<p>A suggested definition:<br>
+Computational reproducibility is the degree to which your code can be
+run in a different computational context (i.e. either by a different
+person, at a different time, on a different machine, or any combination
+of these three) and will produce the same or equivalent outcome.</p>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>What counts as the same or equivalent will vary between research
+contexts. In some cases precise byte-for-byte reproducibility is
+essential, while in others getting results that fall in the same range
+will be suitable.</p>
+<p>The more layers of your computational environment that you are able
+to capture (going from the top to the bottom layer), the more
+reproducible your results will be. However, achieving this is
+accompanied by increasing technical complexity, so choosing the right
+degree of computational reproducibility for your project is key.</p>
+<p>In the next section we’ll look in a bit more detail about package
+managers, virtual environments, and how we can use them in conjunction
+to capture the ‘packages’ layer of a computational environment.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -514,14 +518,12 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Typically, simply providing your source code does not allow other to
+reproduce your work.</li>
+<li>Computational reproducibility is the degree to which code can be run
+in a different context.</li>
+<li>Improving computational reproducibility relies on capturing
+information about your computational environment.</li>
 </ul>
 </div>
 </div>
@@ -530,7 +532,7 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-02-what-are-venvs"><p>Content from <a href="02-what-are-venvs.html">Using Markdown</a></p>
+</section></section><section id="aio-02-what-are-venvs"><p>Content from <a href="02-what-are-venvs.html">Capturing computational environments</a></p>
 <hr>
 <p>Last updated on 2026-01-14 |
 
@@ -546,8 +548,10 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What is a package manager?</li>
+<li>What are virtual environments?</li>
+<li>How can we use them to capture information about a specific
+computational environment?</li>
 </ul>
 </div>
 </div>
@@ -557,127 +561,186 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Develop a basic understanding of what a package manager does</li>
+<li>Develop a conceptual understanding of virtual environments</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<p>Now you have a better idea of the challenges around computational
+reproducibility let’s look at how Package Managers and Virtual
+Environments can be used in conjunction to capture the ‘packages’ layer
+of your project’s computational environment.</p>
+<figure><img src="files/PackageLayerCapture.png" class="figure mx-auto d-block"></figure><section><h2 class="section-heading" id="what-is-a-package-and-a-package-manager">What is a Package and a Package Manager?<a class="anchor" aria-label="anchor" href="#what-is-a-package-and-a-package-manager"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+<p>As mentioned in the previous section, a package can be broadly
+defined as a bundle of code that is designed to accomplish a specific
+task. As the name suggests, a Package Manager is a tool used for adding,
+remove, upgrade, and keeping track of the packages installed for a
+particular piece of software (including programming languages).<br>
+As part of this course we will be using the Python programming language,
+and so we will be using Python’s built in package manager:
+<code>pip</code>. However, many of the concepts discussed apply to other
+programming languages.</p>
+<p>In the context of your code, the packages you install are also known
+as the dependencies for your code (i.e. your code depends on these
+packages being available to work). The packages you install will also
+have their own dependencies, and these dependencies may have their own
+dependencies. Generally this is not something you need to worry about,
+because as part of the installation process the package manager will
+work out the dependencies of all the packages that need to be installed
+(a process called <em>dependency resolution</em>), and then install them
+for you.</p>
+<div id="for-example" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<span class="callout-header">Callout</span>
+<div id="for-example" class="callout-inner">
+<h3 class="callout-title">For example:</h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+<p>You want to install the <code>pandas</code> package, <code>pip</code>
+will check to see which other packages <code>pandas</code> needs and it
+will see that one of the dependencies of <code>pandas</code> is the
+<code>numpy</code> package.<br>
+So when you install <code>pandas</code>, <code>pip</code> will also
+install <code>numpy</code> for you.</p>
 </div>
+</div>
+</div>
+<p>Package mangers will also keep track of the specific versions of the
+packages installed for a project, and can produce files allowing this
+information to be shared. This functionality is a key part of capturing
+a specific computational environment and we’ll return to it later.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>You can learn more about Python packages and how to trun your code
+into a package in the <a href="https://fair2-for-research-software.github.io/FAIR4RS-Packaging/" class="external-link">FAIR4RS
+Packaging lesson</a></p>
+</div>
+</div>
+</div>
+</div>
+<div id="where-does-pip-get-packages-from" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="where-does-pip-get-packages-from" class="callout-inner">
+<h3 class="callout-title">Where does pip get packages from?</h3>
+<div class="callout-content">
+<p>When you install a package using <code>pip</code> it will typically
+access the <a href="https://pypi.org/" class="external-link">Python Package Index (PyPI)</a>
+to download and install that package.<br>
+PyPI is an online repository of over 500,000 packages, and is the most
+commonly used source for installing Python packages.</p>
+<p>It is also possible to install packages from local files, private
+repositories, or even directly from Github repositories, but this is
+outside the scope of this lesson.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="what-are-virtual-environments">What are Virtual Environments?<a class="anchor" aria-label="anchor" href="#what-are-virtual-environments"></a>
+</h2>
+<hr class="half-width">
+<p>By default when you use <code>pip</code> to install a package it will
+be installed in Python’s base environment, and so using <code>pip</code>
+alone for multiple projects will result in their dependencies sharing
+the same space.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Can you think of a few reasons why this may be a problem?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<ul>
+<li>Different projects requiring different versions of the same package
+(Dependency clashes)
+<ul>
+<li>Could be a package you use directly</li>
+<li>Could also be a dependency of a package you use</li>
+</ul>
+</li>
+<li>Difficulty identifying which packages are required for which
+projects (Isolating dependencies)</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+<p>This diagram illustrates the situation:</p>
+<figure><img src="files/BaseEnv.png" class="figure mx-auto d-block"></figure><ol style="list-style-type: decimal">
+<li>In this example, ‘Project 1’ requires <code>numpy</code> v1.18 and
+while ‘Project 2’ doesn’t directly require a conflicting version of
+<code>numpy</code>, <code>pandas</code> requires at least v1.22. This
+creates a dependency clash - You cannot have both versions of this
+package installed in the same environment, so either:
+<ul>
+<li>You break the older project’s computational environment, or</li>
+<li>You cannot develop your new code.</li>
+</ul>
+</li>
+<li>If you manage to resolve the dependency clash, you still have the
+issue that the additional dependencies (namely <code>pillow</code>) from
+‘Project 1’ will also be captured as part of the computational
+environment for ‘Project 2’. This <em>may</em> not cause any issues, but
+it is generally not good practice:
+<ul>
+<li>When capturing information about the computational environment for a
+project we only want to include exactly what is required for the
+reproduction of that project.</li>
+</ul>
+</li>
+</ol>
+<p>Virtual environments are a tool designed to solve both of these
+problems. Conceptually they work by creating a separate, self-contained
+space to install packages. Because these spaces are isolated from one
+another you are able to install different versions of the same package
+for different projects without creating dependency clashes. This
+isolation between projects also allows you to accurately capture which
+packages were used within a specific project, making it easier to
+recreate that aspect of the computational environment in a different
+context.<br>
+In Python there are several different tools you can use to create and
+manage virtual environments. We’ll discuss some of the options later,
+but for this course we’ll focus on Python’s built in virtual environment
+tool: <code>venv</code>.</p>
+<figure><img src="files/venvs.png" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="capturing-the-packages-level-of-a-computational-environment">Capturing the ‘packages’ level of a computational environment<a class="anchor" aria-label="anchor" href="#capturing-the-packages-level-of-a-computational-environment"></a>
 </h2>
 <hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>Now we’ve described Package Managers and Virtual Environments we can
+outline the steps required to successfully capture the ‘packages’ layer
+of a computational environment for a project:</p>
+<ol style="list-style-type: decimal">
+<li><p>Create a virtual environment for your project</p></li>
+<li><p>Develop your project, installing packages into the virtual
+environment as needed</p></li>
+<li><p>Periodically record the packages installed in the environment,
+ideally to a file alongside the code</p></li>
+</ol>
+<p>In the next section we’ll get to grips with using <code>pip</code>
+and <code>venv</code>, and then move onto how to capture the ‘packages’
+level of a computational environment using them.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -686,14 +749,18 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Package Managers are used to install, remove, upgrade, and track
+software.</li>
+<li>In the context of Python and other programming languages this
+software is bundles of other people’s code.</li>
+<li>However, installing all packages to the same place can cause
+dependency clashes and makes recreating a computational environment
+difficult.</li>
+<li>Virtual environments are used to deal with this problem by creating
+isolated spaces where packages can be installed without interfering with
+one another.</li>
+<li>Using these two tools together allows capture of the ‘package’ level
+of your computational environment</li>
 </ul>
 </div>
 </div>
@@ -702,7 +769,7 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-03-using-venvs"><p>Content from <a href="03-using-venvs.html">Using Markdown</a></p>
+</section></section><section id="aio-03-using-venvs"><p>Content from <a href="03-using-venvs.html">Getting started with venvand pip</a></p>
 <hr>
 <p>Last updated on 2026-01-14 |
 
@@ -718,8 +785,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How do I create a venv?</li>
+<li>How do I install packages into my new venv?</li>
 </ul>
 </div>
 </div>
@@ -729,9 +796,9 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Create a new virtual environment</li>
+<li>Learn how to activate and deactivate the virtual environment</li>
+<li>Installing packages in your environment</li>
 </ul>
 </div>
 </div>
@@ -741,115 +808,524 @@ challenge blocks</li>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+<p>Now we have a grasp of the steps needed to capture the package layer
+of the computational environment, so let’s get started with
+<code>venv</code> and <code>pip</code>.</p>
+</section><section><h2 class="section-heading" id="creating-a-new-virtual-environment">Creating a new Virtual Environment<a class="anchor" aria-label="anchor" href="#creating-a-new-virtual-environment"></a>
 </h2>
 <hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
+<p>We can set up a new virtual environment anywhere, but it’s generally
+considered good practice to set it up in the folder for your
+project.</p>
+<p>So let’s start by creating a directory for our project using the
+terminal, and the moving into it.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">mkdir</span> my-new-project</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="bu">cd</span> my-new-project</span></code></pre>
+</div>
+<p>Now we can create our virtual environment using the <code>venv</code>
+module:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span></code></pre>
+</div>
+
+<p>If we view the contents of the <code>my-new-project</code> directory
+by using <code>ls</code> (for Windows) or <code>ls -a</code> (for MacOS
+/Linux), we should see that there is now a <code>.venv</code>
+sub-directory.</p>
+<div id="what-should-i-call-my-virtual-environment-directory" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div class="callout-inner">
+<div id="what-should-i-call-my-virtual-environment-directory" class="callout-inner">
+<h3 class="callout-title">What should I call my virtual environment
+directory?</h3>
 <div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
+<p>You can call the directory that contains the virtual environment
+whatever you like, but the two conventional names are <code>venv</code>
+and <code>.venv</code>.</p>
+<p>The primary difference between these two is that the <code>.</code>
+at the start of <code>.venv</code> indicates to MacOS and Linux-based
+operating systems that this directory should be hidden when you view the
+parent directory (i.e. <code>my-new-project</code>).</p>
+<p>In this course I will default to <code>.venv</code> but you don’t
+have to copy me.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</section><section><h2 class="section-heading" id="activating-the-new-virtual-environment">Activating the new virtual environment<a class="anchor" aria-label="anchor" href="#activating-the-new-virtual-environment"></a>
 </h2>
 <hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>Now you’ve created the virtual environment you’re ready to start
+installing packages, right?</p>
+<p>Not quite, the next step is activating the environment. This step
+effectively tells your operating system that it should be using the
+Python interpreter in your new virtual environment, rather than the one
+in the base environment. We’ll see why this is important later.</p>
+<p>The command you use to do this will depend on the OS you are
+using:</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  MacOS/Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<p><code>.venv/Scripts/activate</code></p>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<p><code>source .venv/bin/activate</code></p>
+</div>
+</div>
+</div>
+<p>Once you’ve done this you should see a prompt with name of you
+environment appear on the left of your console, e.g:</p>
+<div class="tabs">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-1" type="button" role="tab" aria-controls="nav-tabpanel-2-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-1">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-2" type="button" role="tab" aria-controls="nav-tabpanel-2-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-2">
+  MacOS/Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
+<p><code>(.venv) PS C:\Users\Daniel\Projects\my-new-project&gt;</code></p>
+</div>
+<div id="nav-tabpanel-2-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-2">
+<p><code>(.venv) dan@DCS032157:~/my-new-project$</code></p>
+</div>
+</div>
+</div>
+<p>Now you are ready to start installing packages for your project.</p>
+<div id="prompt-name-blues" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="prompt-name-blues" class="callout-inner">
+<h3 class="callout-title">Prompt name blues</h3>
+<div class="callout-content">
+<p>If you called the directory you created your environment
+<code>.venv</code> you’ll notice that the name of the environment
+displayed in your console is the same. This isn’t very informative,
+especially if you’re switching between multiple projects (are you sure
+you’re installing that package in the right <code>.venv</code>?)</p>
+<p>By defult this name is the same name you gave to the directory
+contianing the virtual environment, so you could address this by giving
+the directory a different name e.g.:
+<code>python -m venv my-new-project-venv</code>, and this will be
+reflected in the console:</p>
+<div class="tabs">
+<nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-3-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-1" type="button" role="tab" aria-controls="nav-tabpanel-3-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-3-1">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-3-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-2" type="button" role="tab" aria-controls="nav-tabpanel-3-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-3-2">
+  MacOS/Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-3" class="tab-content">
+<div id="nav-tabpanel-3-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-1">
+<p><code>(my-new-project-venv) PS C:\Users\Daniel\Projects\my-new-project&gt;</code></p>
+</div>
+<div id="nav-tabpanel-3-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-2">
+<p><code>(my-new-project-venv) dan@DCS032157:~/my-new-project$</code></p>
+</div>
+</div>
+</div>
+<p>However, this does mean you have to remember the name you gave to the
+virtual environment for each project. Not the end of the world, but a
+bit annoying.</p>
+<div class="section level4">
+<h4 id="prompt-to-the-rescue">
+<code>--prompt</code> to the rescue<a class="anchor" aria-label="anchor" href="#prompt-to-the-rescue"></a>
+</h4>
+<p>Handily, <code>venv</code> gives you the option to customise the text
+in the console for each project:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv <span class="at">--prompt</span> my-new-project</span></code></pre>
+</div>
+<p>Which will set the virtual environment directory name to
+<code>venv</code>, but also set the console prompt to
+<code>my-new-project</code>:</p>
+<div class="tabs">
+<nav><div id="nav-tab-4" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-4-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-4-1" type="button" role="tab" aria-controls="nav-tabpanel-4-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-4-1">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-4-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-4-2" type="button" role="tab" aria-controls="nav-tabpanel-4-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-4-2">
+  MacOS/Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-4" class="tab-content">
+<div id="nav-tabpanel-4-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-1">
+<p><code>(my-new-project) PS C:\Users\Daniel\Projects\my-new-project&gt;</code></p>
+</div>
+<div id="nav-tabpanel-4-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-2">
+<p><code>(my-new-project) dan@DCS032157:~/my-new-project$</code></p>
+</div>
+</div>
+</div>
+<p>You can even use the name of the current directory without having to
+type it out:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv <span class="at">--prompt</span> .</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="deactivating-the-current-virtual-environment">Deactivating the current virtual environment<a class="anchor" aria-label="anchor" href="#deactivating-the-current-virtual-environment"></a>
+</h2>
+<hr class="half-width">
+<p>Deactivating the currently activated virtual environment and
+returning to using the base environment is as simple as using the
+deactivate command:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">deactivate</span></span></code></pre>
+</div>
+<p>If you want to reactivate the environment then just follow the steps
+to activate it, no need to create a new one.</p>
+<div id="your-turn-1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="your-turn-1" class="callout-inner">
+<h3 class="callout-title">Your Turn 1</h3>
+<div class="callout-content">
+<p>Create a new project folder, create a new virtual environment inside
+it, and activate that virtual environment.<br>
+Try and make sure to name your virtual environment something
+memorable.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="using-your-virtual-environment">Using your Virtual Environment<a class="anchor" aria-label="anchor" href="#using-your-virtual-environment"></a>
+</h2>
+<hr class="half-width">
+<p>Now you have a virtual environment set up for your project, let’s
+start using it.</p>
+<div class="section level3">
+<h3 id="installing-packages-into-the-virtual-environment">Installing packages into the Virtual Environment<a class="anchor" aria-label="anchor" href="#installing-packages-into-the-virtual-environment"></a>
+</h3>
+<p>First let’s reactivate our virtual environment if it’s not already
+active:</p>
+<div class="tabs">
+<nav><div id="nav-tab-5" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-5-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-5-1" type="button" role="tab" aria-controls="nav-tabpanel-5-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-5-1">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-5-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-5-2" type="button" role="tab" aria-controls="nav-tabpanel-5-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-5-2">
+  MacOS/Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-5" class="tab-content">
+<div id="nav-tabpanel-5-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-1">
+<p><code>.venv/Scripts/activate</code></p>
+</div>
+<div id="nav-tabpanel-5-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-2">
+<p><code>source .venv/bin/activate</code></p>
+</div>
+</div>
+</div>
+<p>Now we can install packages using <code>pip</code> as we would
+usually, e.g:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install emoji</span></code></pre>
+</div>
+<p>Which will install the latest available version of the
+<code>emoji</code> package to our environment.</p>
+<p>You can check what is installed in your current environment by
+running:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip list</span></code></pre>
+</div>
+<pre><code>Package Version
+------- -------
+emoji   2.14.0
+pip     24.2</code></pre>
+<p>You should also verify that the code is accessible to you by starting
+the Python interpreter (type <code>python</code> at the command line)
+and then running the code below:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="im">import</span> emoji</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="bu">print</span>(emoji.emojize(<span class="st">'Python is :thumbs_up:'</span>))</span></code></pre>
+</div>
+<p>To exit the Python interpreter you can either type
+<code>exit()</code> and press return, or use the keyboard shortcut
+<code>Ctrl</code>/<code>Cmd</code> + <code>D</code></p>
+<div id="your-turn-2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="your-turn-2" class="callout-inner">
+<h3 class="callout-title">Your turn 2</h3>
+<div class="callout-content">
+<p>Try installing and using a different package
+(e.g. <code>numpy</code>, <code>pandas</code>,
+<code>pillow</code>).<br>
+Try using <code>python -m pip list</code> when your virtual environment
+is activated to see if the package is available in your
+environment.<br>
+What happens if you deactivate you environment and try and run the emoji
+code above? Use <code>python -m pip list</code> to help you
+investigate</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="the-nuts-and-bolts-of-virtual-environments">The nuts and bolts of Virtual environments<a class="anchor" aria-label="anchor" href="#the-nuts-and-bolts-of-virtual-environments"></a>
+</h2>
+<hr class="half-width">
+<p>At this point you may be wondering what is going on behind the scenes
+to make this all work. So, lets take a brief detour to give you an
+idea.</p>
+<div class="section level3">
+<h3 id="peeking-inside--venv">Peeking inside .venv<a class="anchor" aria-label="anchor" href="#peeking-inside--venv"></a>
+</h3>
+<p>Lets start by looking in the <code>.venv</code> directory in your
+project. The contents will be slightly different depending on your
+operating system:</p>
+<div class="tabs">
+<nav><div id="nav-tab-6" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-6-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-6-1" type="button" role="tab" aria-controls="nav-tabpanel-6-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-6-1">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-6-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-6-2" type="button" role="tab" aria-controls="nav-tabpanel-6-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-6-2">
+  MacOS/Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-6" class="tab-content">
+<div id="nav-tabpanel-6-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-1">
+<pre><code>📂 my-new-project/
+└── 📂 .venv/
+    ├── 📂 Include/
+    ├── 📂 Lib/
+    |   └── 📂 site-packages/
+    ├── 📂 Scripts/
+    |   ├── 📄 activate.bat
+    |   ├── 📄 deactivate.bat
+    |   ├── 📄 pip.exe
+    |   ├── 📄 python.exe
+    |   └── ...
+    └── 📄 pyvenv.cfg</code></pre>
+<p>The sub-directories of interest here are:<br>
+- <code>Scripts</code>, which contains the files used to
+activate/deactivate the virtual environment, as well as a copy of Python
+and Pip<br>
+- <code>Lib</code>, which contains all the packages you have installed
+within the virtual envoronment (although ususlly nested within
+sub-directories, e.g. <code>Lib/site-packages/</code>)</p>
+</div>
+<div id="nav-tabpanel-6-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-2">
+<pre><code>📂 my-new-project/
+└── 📂 .venv/
+    ├── 📂 bin/
+    |   ├── 📄 activate
+    |   ├── 📄 pip
+    |   ├── 📄 python
+    |   └── ...
+    ├── 📂 include/
+    ├── 📂 lib/
+    |   └── 📂 python3.12/
+    |       └── 📂 site-packages/
+    └── 📄 pyvenv.cfg</code></pre>
+<p>The sub-directories of interest here are:<br>
+- <code>bin</code>, which contains the files used to activate/deactivate
+the virtual environment, as well as a copy of Python and Pip<br>
+- <code>lib</code>, which contains all the packages you have installed
+within the virtual envoronment (although ususlly nested within
+sub-directories, e.g. <code>lib/python3.12/site-packages/</code>)</p>
+</div>
+</div>
+</div>
+<p>So, when you set up the virtual environment <code>venv</code> will
+(amongst other things):<br>
+- create a copy of the Python interpreter (and <code>pip</code>) in the
+<code>.venv</code> directory<br>
+- create a place where it can install packages, and<br>
+- setup some files that allow the virtual environment to be activated
+and deactivated</p>
+<p>But you now have (at least) two Python executables on your computer.
+How does you computer know which one to use within the virtual
+environment?</p>
+</div>
+<div class="section level3">
+<h3 id="the-path-to-python">The path to Python<a class="anchor" aria-label="anchor" href="#the-path-to-python"></a>
+</h3>
+<p>To explain this we need to introduce environmental variables, and
+specifically the <code>PATH</code> environmental variable.<br>
+Environmental variables are values held by your Operating System which
+tell the Operating System and installed programs how to behave.<br>
+One of the more common ones that you may come across is the
+<code>PATH</code> variable which, in essence, is a is a list of places
+that your computer will check for executables.<br>
+So, when you run <code>python</code> in the console your computer will
+go through this list of places, get the location of the Python
+executables on your system, and then run Python from the first place it
+finds that executable.</p>
+<p>You can see what directories are in your <code>PATH</code> variable
+by running:</p>
+<div class="tabs">
+<nav><div id="nav-tab-7" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-7-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-7-1" type="button" role="tab" aria-controls="nav-tabpanel-7-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-7-1">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-7-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-7-2" type="button" role="tab" aria-controls="nav-tabpanel-7-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-7-2">
+  MacOS/Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-7" class="tab-content">
+<div id="nav-tabpanel-7-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-7-1">
+<p><code>$env:path</code></p>
+<p>To make the output a bit more human readable (one line per directory)
+use:<br><code>$env:path -split ';'</code></p>
+</div>
+<div id="nav-tabpanel-7-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-7-2">
+<p><code>echo $PATH</code></p>
+<p>To make the output a bit more human readable (one line per directory)
+use:<br><code>echo -e ${PATH//:/\\n}</code></p>
+</div>
+</div>
+</div>
+<p>You can also see the locations of a specific executable on the
+<code>PATH</code> by running:</p>
+<div class="tabs">
+<nav><div id="nav-tab-8" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-8-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-8-1" type="button" role="tab" aria-controls="nav-tabpanel-8-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-8-1">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-8-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-8-2" type="button" role="tab" aria-controls="nav-tabpanel-8-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-8-2">
+  MacOS/Linux
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-8" class="tab-content">
+<div id="nav-tabpanel-8-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-8-1">
+<p><code>where.exe python</code></p>
+</div>
+<div id="nav-tabpanel-8-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-8-2">
+<p><code>which -a python</code></p>
+</div>
+</div>
+</div>
+<div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Run the above commands while your virtual environment is activated vs
+deactivated.<br>
+What differences do you see in the <code>PATH</code> variable, and the
+list of Python locations?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="pulling-it-together">Pulling it together<a class="anchor" aria-label="anchor" href="#pulling-it-together"></a>
+</h3>
+<p>The parts we’ve looked at in the last 2 sections give us a clearer
+idea of what Python is doing when you create and activate a virtual
+environment:</p>
+<ol style="list-style-type: decimal">
+<li>You run <code>python -m venv .venv</code>:
+<ul>
+<li>A directory called <code>.venv</code> is created<br>
+</li>
+<li>A standard directory structure is created within
+<code>.venv</code><br>
+</li>
+<li>A copy of Python, pip, and the activate/deactivate files are put in
+a sub-directory of <code>.venv</code> (where will depend on your
+OS)</li>
+</ul>
+</li>
+<li>You activate the virtual environment:
+<ul>
+<li>The path to the <code>.venv</code> directory is added to start of
+the system’s <code>PATH</code> environmental variable<br>
+</li>
+<li>The path to the <code>site-packages</code> directory within
+<code>.venv</code> is added to the <code>PYTHONPATH</code> environmental
+variable
+<ul>
+<li>Not discussed in detail but this is how Python knows where to
+install/import packages</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>You deactivate the virtual environment:
+<ul>
+<li>The path to <code>.venv</code> is removed from the start of the
+system’s <code>PATH</code> environmental variable<br>
+</li>
+<li>The path to <code>site-packages</code> within <code>.venv</code> is
+removed from the <code>PYTHONPATH</code> environmental variable</li>
+</ul>
+</li>
+</ol>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -858,14 +1334,19 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>You can create, activate, and deactivate virtual environments using
+the <code>venv</code> package</li>
+<li>You can installing packages in a virtual environment using
+<code>pip install</code>, and view installed packages with
+<code>pip list</code>
+</li>
+<li>Python and <code>venv</code> create an directory on your computer
+that contains your virtual environment ( a separate Python interpreter
+and library)</li>
+<li>Activating and deactivating the virtual environment modifies the
+<code>PATH</code> and <code>PYTHONPATH</code> environmental variables to
+add/remove the path to the directory containing the virtual
+environment.</li>
 </ul>
 </div>
 </div>
@@ -874,7 +1355,8 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-04-gen-reqs"><p>Content from <a href="04-gen-reqs.html">Using Markdown</a></p>
+</div>
+</section></section><section id="aio-04-gen-reqs"><p>Content from <a href="04-gen-reqs.html">Using venv and pip to capture a computational environment</a></p>
 <hr>
 <p>Last updated on 2026-01-14 |
 
@@ -890,8 +1372,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How do I use <code>venv</code> and <code>pip</code> to capture my
+computational environments?</li>
 </ul>
 </div>
 </div>
@@ -901,127 +1383,208 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>How to specify specific versions of a package</li>
+<li>Recording packages installed in an environment</li>
+<li>Restoring packages to an environment</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<p>Now we’ve got the basics of how to use <code>venv</code> to create a
+virtual environment and then install packages to it, let’s move onto
+using these tools to record and restore the packages we install.</p>
+<section><h2 class="section-heading" id="specifying-specific-versions-for-a-package">Specifying specific versions for a package<a class="anchor" aria-label="anchor" href="#specifying-specific-versions-for-a-package"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<p>Before we start we have to address the question: What if we want to
+install a specific version of a package for our project?<br>
+Currently we have been using the command
+<code>python -m pip install numpy</code>, but by default this will
+install the latest version of <code>numpy</code>.<br>
+Not particularly useful if we need to use anything other than the latest
+version.</p>
+<p>In this case we can use <a href="https://packaging.python.org/en/latest/specifications/version-specifiers/#id5" class="external-link">Version
+Specifiers</a> to tell <code>pip</code> exactly which version we want to
+install.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Software Versioning
+  </h3>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<p>Software Versioning is the practice of assigning an identifier to a
+particular release or state of a piece of software. This allows you to
+indicate what version of a particular bit of software you used to do
+something (e.g. execute code, run an analysis, etc.)</p>
+<div class="section level4">
+<h4 id="semantic-versioning">Semantic versioning<a class="anchor" aria-label="anchor" href="#semantic-versioning"></a>
+</h4>
+<p>The primary versioning system used is called ‘<a href="https://semver.org" class="external-link">Semantic Versioning</a>’ and follows the
+following pattern: Major.minor.patch<br>
+For example, the version of Python I am currently using is 3.12.1, so it
+has: - a major version of 3,<br>
+- a minor version of 12, and<br>
+- a patch version of 1</p>
+</div>
+<div class="section level4">
+<h4 id="calendar-versioning">Calendar versioning<a class="anchor" aria-label="anchor" href="#calendar-versioning"></a>
+</h4>
+<p>An alternative, and lesser used system is called ‘<a href="https://calver.org" class="external-link">Calendar versioning</a>’ and follows the
+following pattern: Year.month<br>
+For example, the latest release of the Ubuntu operating system is:
+24.10, indicating it was released in October 2024.</p>
+<p>For more details about software versioning see the <a href="https://fair2-for-research-software.github.io/FAIR4RS-Packaging/" class="external-link">FAIR4RS
+Packaging lesson</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>There are a whole range of different specifiers but the two most
+useful in this case are:</p>
+<ul>
+<li><p><code>~=</code> - Compatible release</p></li>
+<li><p><code>==</code> - Version match</p></li>
+</ul>
+<div class="section level3">
+<h3 id="compatible-release">Compatible release<a class="anchor" aria-label="anchor" href="#compatible-release"></a>
 </h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<p>This matches any version of the package that is expected to be
+compatible with the version specified, e.g.:</p>
+<ul>
+<li><p><code>~= 3.1</code> will select version 3.1 or later, but not
+version 4.0 or later</p></li>
+<li><p><code>~= 3.1.2</code> will select version 3.1 or later, but not
+version 3.2 or later</p></li>
+</ul>
 </div>
+<div class="section level3">
+<h3 id="version-match">Version match<a class="anchor" aria-label="anchor" href="#version-match"></a>
+</h3>
+<p>This matches a version of a package exactly, e.g.:</p>
+<ul>
+<li><p><code>== 3.1</code> will select version 3.1 (or 3.1.0), and no
+other version.</p></li>
+<li><p><code>== 3.1.*</code> will select any version that starts with
+3.1, and is equivalent to <code>~= 3.1.0</code></p></li>
+</ul>
+<p>So if you wanted to install the latest version of <code>numpy</code>
+version 1 you could use either:</p>
+<pre><code>python -m pip install numpy~=1.0</code></pre>
+<p>or</p>
+<pre><code>python -m pip install numpy==1.*</code></pre>
+<p>Version specifier are also used when we record the packages we’ve
+used our project, which we’ll see next.</p>
 </div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</section><section><h2 class="section-heading" id="recording-the-packages-installed">Recording the packages installed<a class="anchor" aria-label="anchor" href="#recording-the-packages-installed"></a>
 </h2>
 <hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
+<p>So far, we’ve seen how virtual environments can be used to isolate
+the dependencies for each of our projects, but how do we ensure that
+this environment can be recreated?</p>
+<p>We’ve used <code>pip list</code> to see the packages we’ve installed
+before, so maybe we could use this and copy everything listed into a
+file?</p>
+<p>As with a previous solution, this would work, but is manual and may
+be prone to errors so it is better to get the computer to do this for
+you. Also, <code>pip</code> lists all the packages available in your
+environment, not just the ones you installed, which is not ideal.</p>
+<p>Luckily we have <code>pip freeze</code>. <code>pip freeze</code> will
+output a list of packages with version specifiers for the packages you
+installed in your virtual environment. These can then be written to a
+file (conventionally called <code>requirements.txt</code>) that can then
+be used to restore all the packages installed into a new
+environment.</p>
+<pre><code>python -m pip freeze &gt; requirements.txt</code></pre>
+<p>The <code>&gt;</code> symbol here can be read as: ‘write the output
+of the command on the left into the file on the right’ (instead of
+displaying it on screen)</p>
+<p><strong>Note</strong>: <code>pip</code> will not automatically update
+the <code>requirements.txt</code> file to include packages you install
+after running <code>pip freeze</code>. So be sure to rerun it
+periodically, and especially after you install new packages.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Use <code>pip freeze</code> to record all the packages installed in
+your virtual environment.<br>
+Take a look at the <code>requirements.txt</code> file generated. What do
+you notice?</p>
+</div>
+</div>
+</div>
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
+<p>Now you have a file that has captured the packages used in your
+computational environment, you can put it under version control
+alongside your code.<br>
+This ensures that anyone who accesses your code can also recreate this
+part of your computational environment.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</section><section><h2 class="section-heading" id="restoring-an-environment-from-a-requirements-txt-file">Restoring an environment from a <code>requirements.txt</code>
+file<a class="anchor" aria-label="anchor" href="#restoring-an-environment-from-a-requirements-txt-file"></a>
 </h2>
 <hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>Now recreating a project environment can be done in 3 steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Create a new environment</p></li>
+<li><p>Activate the environment</p></li>
+<li><p>Install the dependencies from <code>requirements.txt</code>:
+<code>python -m pip install --requirement requirements.txt</code></p></li>
+</ol>
+<p>You should be familiar with how to do steps 1 and 2, and step 3 is a
+small modification to how you’d typically install packages.</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>The <code>--requirement</code> option tells <code>pip</code> that you
+are installing the packages from a file and to look in the file for the
+specific package names and versions.<br>
+This can be shortened to just <code>-r</code>.</p>
+</div>
+</div>
+</div>
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p><a href="files/requirements.txt">Here</a> is a requirements.txt file
+from one of my projects.<br>
+I’d like you to download it, and follow the steps above to recreate the
+computational environment.<br>
+(You may have to right click and select “Save file as…”)</p>
+<p>What packages (names and versions) did I have installed in this
+environment?<br>
+Can you recreate this level of my computational environment?</p>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1030,14 +1593,14 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>Package versions can be specified by using the semantic versioning
+syntax (or, less commonly, the calendar versioning syntax).</li>
+<li>
+<code>pip freeze</code> can be used to get a list of installed
+packages, and these can be written to a file.</li>
+<li>Packages can be restored from a file produced by
+<code>pip freeze</code> by using the <code>--requirement</code> option
+with <code>pip install</code>.</li>
 </ul>
 </div>
 </div>
@@ -1046,7 +1609,7 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-05-limitations"><p>Content from <a href="05-limitations.html">Using Markdown</a></p>
+</section></section><section id="aio-05-limitations"><p>Content from <a href="05-limitations.html">Limitations</a></p>
 <hr>
 <p>Last updated on 2026-01-14 |
 
@@ -1062,8 +1625,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What are the limitations of <code>venv</code>?</li>
+<li>What are the limitations of virtual environments more
+generally?</li>
 </ul>
 </div>
 </div>
@@ -1073,127 +1637,210 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Understand the limitations of using <code>venv</code> and some
+alternatives</li>
+<li>Understand the inherent limitations of virtual environments, and
+potential solutions for them</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="specific-limitations-of-venv">Specific limitations of <code>venv</code>
+<a class="anchor" aria-label="anchor" href="#specific-limitations-of-venv"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files and <a href="https://rmarkdown.rstudio.com/" class="external-link">R
-Markdown</a> for dynamic files that can render code into output. Please
-refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson:</p>
+<p>While <code>venv</code> is a relatively simple option for setting up
+and managing your virtual environments it does have some key
+limitations:</p>
 <ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
+<li>Python version management</li>
+<li>Automatically keeping track of installed packages</li>
 </ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="section level3">
+<h3 id="python-version-management">1. Python version management<a class="anchor" aria-label="anchor" href="#python-version-management"></a>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+<p>There are differences between the different versions of Python. With
+the most extreme example being the incompatibility between Python 2 and
+Python 3. Depending on the complexity of your code, changes between
+version may not affect you, but it can be hard to tell without trying a
+newer version. If you want to make your code truly reproducible you
+should include some information about which version of Python you used
+to produce your results.</p>
+<p><code>venv</code> uses whichever version(s) of Python you have
+installed on your machine, but neither <code>venv</code> or
+<code>pip</code> records information about which version of Python you
+are using.</p>
+<p>It is, of course, possible to include this information with the
+instructions on how to run your code, but as highlighted multiple times
+it is better to have an automated solution.</p>
 </div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="section level3">
+<h3 id="automatically-keeping-track-of-installed-packages">2. Automatically keeping track of installed packages<a class="anchor" aria-label="anchor" href="#automatically-keeping-track-of-installed-packages"></a>
 </h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<p>As shown, using <code>venv</code> with <code>pip</code> can create a
+list of dependencies for your project, but this has to be created
+manually and updated manually whenever you modify the dependencies for
+your project.</p>
+<p>Ideally this would be updated automatically as packages are added and
+removed, so as to avoid any mistakes or forgetting to update it after
+changes have been made.</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within
-challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can use standard markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure><div id="callout1" class="callout">
+<div class="section level3">
+<h3 id="solutions">Solutions<a class="anchor" aria-label="anchor" href="#solutions"></a>
+</h3>
+<p>There are quite a few different tools that have been developed to
+deal with these issues. Out of these the ones available, I have found
+most useful to be <a href="https://docs.astral.sh/uv/" class="external-link"><code>uv</code></a> and <a href="https://docs.anaconda.com/miniconda/" class="external-link"><code>conda</code></a>/ <a href="https://github.com/conda-forge/miniforge" class="external-link"><code>miniforge</code></a>/
+<a href="https://pixi.sh/latest/" class="external-link"><code>pixi</code></a>.</p>
+<p>These tools combine package, environment, and Python version
+management, allowing you to do everything that <code>pip</code> and
+<code>venv</code> do, while also being able to easily switch between
+different Python versions. Both will also record the version of Python
+used within an environment allowing you to capture both the ‘package’
+and ‘language’ layers of your computational environment in one go.</p>
+<p>There are some differences between them though:</p>
+<p><code>uv</code>:<br>
+- Built as a replacement for <code>pip</code> and
+<code>venv</code><br>
+- Uses the same package repositories as <code>pip</code><br>
+- Uses the same virtual environment structure as <code>venv</code><br>
+- Auto updating of environment dependencies file (equivalent to
+<code>requirements.txt</code>)<br>
+- Noticeably faster for installing packages than <code>pip</code> or
+<code>conda</code><br>
+- Not reached a version 1 release (yet!)</p>
+<p><code>conda</code>/<code>miniforge</code>/<code>pixi</code>:<br>
+- Provide pre-compiled binaries for packages, which means faster
+installation<br>
+- Includes other languages (notably R)<br>
+- They use their own package repositories, so may not be inter-operable
+with other Python tools without a bit of fiddling<br>
+- They use their own virtual environment structure that is different
+from the one explained here</p>
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Callout sections can highlight information.</p>
-<p>They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present “asides”: content that is
-not central to the narrative of the lesson, e.g. by providing the answer
-to a commonly-asked question.</p>
+<p>For a broader discussion of the tooling available for Python
+version/package/environment management have a look at these two blog
+posts:</p>
+<p><a href="https://www.nijho.lt/post/python-environments/" class="external-link">Python
+Environment Jungle: Finding My Perfect Workflow</a></p>
+<p><a href="https://alpopkes.com/posts/python/packaging_tools/" class="external-link">An
+unbiased evaluation of environment management and packaging
+tools</a></p>
+<p>James Thomas has <a href="https://jatonline.github.io/managing-dependencies-using-uv-and-pixi/" class="external-link">tutorials
+for both <code>uv</code> and <code>pixi</code></a></p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  What do I use/recommend?
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>Prior to 2025 I primarily used either <code>pip</code> and
+<code>venv</code> or <code>conda</code> to manage my Python
+environments. However, for all new Python projects since the start of
+2025 I have used <code>uv</code> and will continue to do so wherever
+possible. I haven’t used <code>pixi</code> at all.</p>
+<p>Once you feel comfortable with the concepts discussed in this
+material I would suggest giving <code>uv</code> a try, although
+ultimately the best tool for this is the one that suits your workflow
+best.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="general-limitations-of-virtual-environments">General limitations of virtual environments<a class="anchor" aria-label="anchor" href="#general-limitations-of-virtual-environments"></a>
 </h2>
 <hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>Beyond the specific limitations of <code>venv</code>, virtual
+environments in general have one key limitation:</p>
+<ul>
+<li>They are not able to control the underlying system they are working
+within.</li>
+</ul>
+<p>If we go back to our diagram showing the different layers of your
+computational environment, you can see that virtual environments only
+address the layer of the environment immediately below your code.</p>
+<figure><img src="files/PackageLayerCapture.png" class="figure mx-auto d-block"></figure><p>If you are using something like <code>conda</code>,
+<code>miniforge</code> or <code>uv</code>, then you may be able to
+extend that to the ‘language’ layer. But these tools are not able to
+capture the ‘operating system’ layer.</p>
+<p>Depending on the degree of computational reproducibility you are
+looking for, capturing the ‘package’ and ‘language’ layers may be
+enough. However, if you are looking for byte-for-byte reproducibility
+you will likely also want to capture as much of the computational
+environment as possible, and so you will need to turn to other
+tools.</p>
+</section><section><h2 class="section-heading" id="capturing-the-operating-system-layer">Capturing the operating system layer<a class="anchor" aria-label="anchor" href="#capturing-the-operating-system-layer"></a>
+</h2>
+<hr class="half-width">
+<p>There are multiple different tools that can be used to capture the
+layer below ‘package’/ ‘language’</p>
+<div class="section level3">
+<h3 id="virtual-machines">Virtual machines<a class="anchor" aria-label="anchor" href="#virtual-machines"></a>
+</h3>
+<p>This is one of the more commonly known tools for capturing and
+replicating the ‘Operating System’ layer a computational environment.
+Virtual machines (VMs) are effectively an emulation or virtualisation of
+an operating within your own “host” operating system. For example, using
+a virtual machine I can create and run a Windows XP operating system
+within my Windows 10 machine. These can also be interacted with using
+familiar point and click interfaces, and can be customised to access a
+specific portion of the host machines CPU, memory, disk, etc.<br>
+It is possible to take a snapshot of an exiting VM for distribution, or
+use an <a href="https://en.wikipedia.org/wiki/Infrastructure_as_code" class="external-link">‘Infrastructure
+as code’</a> tool such as <a href="https://docs.ansible.com/ansible/latest/index.html" class="external-link">Ansible</a> to
+write a script to (re)create a specific environment (e.g. install
+specific software, etc)</p>
+</div>
+<div class="section level3">
+<h3 id="containers">Containers<a class="anchor" aria-label="anchor" href="#containers"></a>
+</h3>
+<p>Containers are similar to Virtual machines in that they virtualise an
+operating system, but containers are typically more lightweight than VMs
+as they only contain software and files that are explicitly defined in
+order to run the project contained within them.<br>
+They also typically don’t have a GUI in the same way the OS on your
+computer does (although some containers will provide an interface,
+e.g. RStudio Server).<br>
+If you want to create an environment on your machine and then run it on
+something more powerful (like a HPC) then containers are a good way of
+achieving this, although this can become complex due to limited
+permissions and/or underlying hardware.</p>
+<p>Andy Turner of the EPCC has an excellent course providing an <a href="https://epcced.github.io/2025-02-17_containers_cambridge/" class="external-link">introduction
+to using containers for reproducible computational environments</a>.</p>
+</div>
+<div class="section level3">
+<h3 id="nixguix">Nix/Guix<a class="anchor" aria-label="anchor" href="#nixguix"></a>
+</h3>
+<p><a href="https://nixos.org" class="external-link">Nix(OS)</a> and <a href="https://guix.gnu.org" class="external-link">Guix</a> also provide a way of capturing the
+computational environment below the ‘packages’ and ‘language’ layers,
+but take a slightly different approach to this than VMs and
+Containers.<br>
+These are package managers based on the idea declarative configurations,
+that is: “specify your setup with a programmable configuration file, and
+then let the package manager arrange for the software available on the
+system to reflect that”.<br>
+This is similar to what <code>pip</code> is doing with the
+<code>requirements.txt</code> file described previously, but for an
+entire Operating system. However, this approach takes it one step
+further by allowing multiple versions of the same package to exist on a
+machine simultaneously.<br>
+For a more complete outline of this approach <a href="https://lwn.net/Articles/962788/" class="external-link">see this post</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1202,14 +1849,18 @@ this:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>
+<code>pip</code> and <code>venv</code> provide the most basic
+functionality for capturing this level of your computational
+environment.</li>
+<li>Other tools (e.g. <code>uv</code>, <code>pixi</code>) are available
+that build on this basic functionality that would be worth investigating
+and incorporating.</li>
+<li>Virtual environments can only capture a portion of the computational
+environment.</li>
+<li>Projects that require more of the computational environment to be
+captured may need more advanced tools (e.g. VMs, containers, Nix/Guix)
+to achieve this.</li>
 </ul>
 </div>
 </div>
@@ -1218,6 +1869,7 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></section>
 </div>
     </main>
