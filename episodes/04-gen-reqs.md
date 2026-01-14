@@ -1,114 +1,185 @@
 ---
-title: "Using Markdown"
-teaching: 10 # teaching time in minutes
-exercises: 2 # exercise time in minutes
+title: Using `venv` and `pip` to capture a computational environment
+teaching: 10
+exercises: 0
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+::: questions
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- How do I use `venv` and `pip` to capture my computational environments?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::
 
-::::::::::::::::::::::::::::::::::::: objectives
+::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- How to specify specific versions of a package
+- Recording packages installed in an environment
+- Restoring packages to an environment
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::
 
-## Introduction
+Now we've got the basics of how to use `venv` to create a virtual environment and then install 
+packages to it, let's move onto using these tools to record and restore the packages we install.
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+## Specifying specific versions for a package
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
+Before we start we have to address the question: What if we want to install a specific version of a 
+package for our project?  
+Currently we have been using the command `python -m pip install numpy`, but by default this will 
+install the latest version of `numpy`.  
+Not particularly useful if we need to use anything other than the latest version.
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+In this case we can use 
+[Version Specifiers](https://packaging.python.org/en/latest/specifications/version-specifiers/#id5) 
+to tell `pip` exactly which version we want to install.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+::: spoiler
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+### Software Versioning
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Software Versioning is the practice of assigning an identifier to a particular release or state of 
+a piece of software. This allows you to indicate what version of a particular bit of software you 
+used to do something (e.g. execute code, run an analysis, etc.)
 
-::::::::::::::::::::::::::::::::::::: challenge 
+#### Semantic versioning
+The primary versioning system used is called '[Semantic Versioning](https://semver.org)' and follows the following 
+pattern: Major.minor.patch  
+For example, the version of Python I am currently using is 3.12.1, so it has:
+  - a major version of 3,  
+  - a minor version of 12, and  
+  - a patch version of 1  
 
-## Challenge 1: Can you do it?
+#### Calendar versioning
+An alternative, and lesser used system is called '[Calendar versioning](https://calver.org)' and follows the following
+pattern: Year.month  
+For example, the latest release of the Ubuntu operating system is: 24.10, indicating it was 
+released in October 2024.  
 
-What is the output of this command?
+For more details about software versioning see the 
+[FAIR4RS Packaging lesson](https://fair2-for-research-software.github.io/FAIR4RS-Packaging/)
+:::::
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+There are a whole range of different specifiers but the two most useful in this case are:  
+
+  - `~=` - Compatible release  
+
+  - `==` - Version match  
+
+### Compatible release
+
+This matches any version of the package that is expected to be compatible with the version 
+specified, e.g.:  
+
+  - `~= 3.1` will select version 3.1 or later, but not version 4.0 or later 
+
+  - `~= 3.1.2` will select version 3.1 or later, but not version 3.2 or later
+
+### Version match
+
+This matches a version of a package exactly, e.g.:
+
+  - `== 3.1` will select version 3.1 (or 3.1.0), and no other version.
+
+  - `== 3.1.*` will select any version that starts with 3.1, and is equivalent to `~= 3.1.0`
+
+So if you wanted to install the latest version of `numpy` version 1 you could use either:
+
+```
+python -m pip install numpy~=1.0
 ```
 
-:::::::::::::::::::::::: solution 
+or
 
-## Output
- 
-```output
-[1] "This new lesson looks good"
+```
+python -m pip install numpy==1.*
 ```
 
-:::::::::::::::::::::::::::::::::
+Version specifier are also used when we record the packages we've used our project, which we'll see 
+next.
 
+## Recording the packages installed
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+So far, we've seen how virtual environments can be used to isolate the dependencies for each of our 
+projects, but how do we ensure that this environment can be recreated?
 
-:::::::::::::::::::::::: solution 
+We've used `pip list` to see the packages we've installed before, so maybe we could use this and 
+copy everything listed into a file?
 
-You can add a line with at least three colons and a `solution` tag.
+As with a previous solution, this would work, but is manual and may be prone to errors so it is 
+better to get the computer to do this for you. Also, `pip` lists all the packages available in your 
+environment, not just the ones you installed, which is not ideal.
 
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+Luckily we have `pip freeze`. `pip freeze` will output a list of packages with version specifiers 
+for the packages you installed in your virtual environment. These can then be written to a file
+(conventionally called `requirements.txt`) that can then be used to restore all the packages installed
+into a new environment.
 
-## Figures
+```
+python -m pip freeze > requirements.txt
+```
 
-You can use standard markdown for static figures with the following syntax:
+The `>` symbol here can be read as: 'write the output of the command on the left into the file on 
+the right' (instead of displaying it on screen)
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+**Note**: `pip` will not automatically update the `requirements.txt` file to include packages you 
+install after running `pip freeze`. So be sure to rerun it periodically, and especially after you 
+install new packages.
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+:::::: challenge
 
-::::::::::::::::::::::::::::::::::::: callout
+Use `pip freeze` to record all the packages installed in your virtual environment.  
+Take a look at the `requirements.txt` file generated. What do you notice?
 
-Callout sections can highlight information.
+:::::::
 
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
+:::: callout
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+Now you have a file that has captured the packages used in your computational environment, you can 
+put it under version control alongside your code.  
+This ensures that anyone who accesses your code can also recreate this part of your computational 
+environment.
 
+::::::
 
-## Math
+## Restoring an environment from a `requirements.txt` file
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+Now recreating a project environment can be done in 3 steps:
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+1. Create a new environment
 
-Cool, right?
+2. Activate the environment
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+3. Install the dependencies from `requirements.txt`: 
+`python -m pip install --requirement requirements.txt`
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+You should be familiar with how to do steps 1 and 2, and step 3 is a small modification to how 
+you'd typically install packages.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::: callout
 
-[r-markdown]: https://rmarkdown.rstudio.com/
+The `--requirement` option tells `pip` that you are installing the packages from a file and to 
+look in the file for the specific package names and versions.  
+This can be shortened to just `-r`.
+
+::::::
+
+:::: challenge
+
+[Here](files/requirements.txt) is a requirements.txt file from one of my projects.  
+I'd like you to download it, and follow the steps above to recreate the computational environment.  
+(You may have to right click and select "Save file as...")  
+
+What packages (names and versions) did I have installed in this environment?  
+Can you recreate this level of my computational environment?
+
+::::::
+
+:::: keypoints
+
+ - Package versions can be specified by using the semantic versioning syntax (or, less commonly, 
+ the calendar versioning syntax).
+ - `pip freeze` can be used to get a list of installed packages, and these can be written to a file.
+ - Packages can be restored from a file produced by `pip freeze` by using the `--requirement` 
+option with `pip install`.
+
+::::::
